@@ -1,0 +1,40 @@
+Item Description,Quantity,Price (INR) per unit (approx with 5% markup),Total Price (INR)
+Ballscrew Kit (300mm with end machining),2,2730,5460
+MGN12H Linear Rails with Carriage Blocks (300mm),3,5040,15120
+GT2 Timing Pulley (20 Teeth),4,275,1100
+GT2 Open Timing Belt (6mm width),4,361,1444
+GT2 Timing Idler Pulleys,4,336,1344
+NEMA 17 Stepper Motors (D-Type Shaft),4,3238,12952
+2020 V-Slot Aluminum Extrusion Profiles (1M lengths),4,2054,8216
+T-Shape Corner Bracket Plates for 2020,4,525,2100
+Ball Screw End Support Bearings (BK/BF12),2,630,1260
+NEMA 17 Stepper Motor Mounting Brackets,2,422,844
+2020 Cast Corner Brackets,24,62.75,1506
+M5 Hammer / Sliding Nuts,100,2.63,263
+M3 Hammer / Sliding Nuts,15,3.53,53
+"M5 Button Head Screws (8mm, 13mm, 16mm, 20mm mix)",80,3.29,263
+M5 T-Nuts,12,9.17,110
+M3 Screws (12mm),16,3.31,53
+3D Printed Custom Parts,1,1050,1050
+100nf Capacitor (C_0805),1,5.25,5.25
+"10uf Capacitor (C_0805) [C1, C2]",2,5.25,10.5
+"100uf Capacitor (C_0805) [C3, C4, C5]",3,7.35,22.05
+"1N4007 Diode [D1, D2, D3]",3,12.6,37.8
+"SK6805 LED [D4, D5, D6]",3,14.7,44.1
+TMC2208 Stepper Driver (Driver1),1,283.5,283.5
+"TMC2208 Stepper Driver (Driver2, UDriver1)",2,283.5,567
+JST 3-Pin Socket Connector [Endstops],3,10.5,31.5
+JST 2-Pin Pin Connector [Fans 1-3],3,10.5,31.5
+Pin Header 1x01 Socket [J1],1,10.5,10.5
+Pin Socket 1x02 [J2],1,10.5,10.5
+"IRLZ44N MOSFET [Q1, Q2, Q3]",3,42,126
+4.7k ohm Resistor (R1),1,5.25,5.25
+220 ohm Resistor (R2),1,5.25,5.25
+"220 ohm Resistor [R3, R4]",2,5.25,10.5
+"10k Resistor [R5, R6, R7]",3,5.25,15.75
+JST 2-Pin Connector [Temp Sensor],1,10.5,10.5
+AMS1117-3.3 Voltage Regulator [U1],1,11.55,11.55
+ESP32-S3-DevKitC [U2],1,882,882
+MPU6050 Accelerometer [U3],1,157.5,157.5
+Step Down Converter [XL103],1,84,84
+,,Total price,55500.5
