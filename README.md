@@ -23,10 +23,15 @@ https://cad.onshape.com/documents/ddc5642abc531e1225c0dc8b/w/1fb68ecf66842d529f7
 
 CREDITS:
 @hacktheclub honetly this project was only possible cause of them, they helped me connect find the right people and finally pushed me to make my dream.
+
 @Stardance as per this commit i am submitting it for funding, fingers crossed that i get funded to make it actual project kudos
+
 @RaygunRupe at first i just started to make it blindly, buy stuff build it and figure on the fly, the only reason i am actually stuck in this deep at designing, to polish the looks is cause of this mf, otherwise i would had already made a mess by skipping all the design aan CAD stuff
+
 @Mistsu Makes(youtube) I waatched his toutorial to understand how to do this project, how the motion system works how the bedslinging mechanism should, if it werent for him, it would had been quite more difficult. And yeah it was this dude only whoose video after watching i decided that yeah lets fing do it, he was my starting point kinda that yeah i can too make this.
+
 @ 3ddistributed.com This gottna be the best website to understand coreXY working, i watched countless toutorials but in the end got how to do this vis this website's infographics only
+
 @Slack hardware community, thoose guys also helped me a lot from figring out how this shit works to networking with people that helped me make this
 
 
