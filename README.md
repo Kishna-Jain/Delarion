@@ -9,4 +9,9 @@ Key takaways:
 Delarion utilizes Klipper firmware with tmc2208 drivers,nema17 stepper motors. The main MCU is an esp32 s3, which does provide endless possibilities for trying out diff stuff.
 
 PCB:
-its a really basic custom pcb, which includes an MPU6050, tmc2208 drivers, Note that you will need to provide the appropriate 24volts clean supply to the board, 5v supply is cleanly regulated by an ams117.
+its a really basic custom pcb, which includes an MPU6050, tmc2208 drivers, Note that you will need to provide the appropriate 24volts clean supply to the board, 5v supply is cleanly regulated by an ams117. And yeah IRLZ44N needs to be attached at the bottom of the board not the top.
+
+
+3d model Demo link::
+https://cad.onshape.com/documents/ddc5642abc531e1225c0dc8b/w/1fb68ecf66842d529f7141f3/e/0a949859a3af9baaf41af0a4
+
