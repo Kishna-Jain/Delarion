@@ -1,0 +1,49 @@
+﻿USD per INR rate (editable):,,95.90,Assumption: approx. mid-Sept 2026 market rate (1 USD ≈ 95.9 INR); change C1 to update all USD values.,,
+,,,,,
+Item Description,Quantity,Price (INR) per unit (approx),Total Price (INR),Total Price (USD),Supplier
+Ballscrew  (300mm with end machining),2,"2,730.00","5,460.00",$56.93,https://robokits.co.in/mechanical-parts/ball-screw-accessories/astro-ball-screw-rod-1204-12mm-dia.-of-500mm-length-with-end-machining-with-sfu1204-flange-nut-combo
+MGN12H Linear Rail guides,3,550.00,"1,650.00",$17.21,https://robu.in/product/mgn12h-sliding-block/
+MGN12H Linear Rails(1m),1,"2,550.00","6,900.00",$71.95,https://robu.in/product/mgn12h-linear-guide-rail-1m-2/
+GT2 Timing Pulley (20 Teeth),4,70.00,280.00,$2.92,https://robu.in/product/aluminum-gt2-timing-pulley-for-6mm-belt-20-tooth-5mm-bore-2pcs/
+GT2 Open Timing Belt (6mm width),1,66.90,669.00,$6.98,https://robu.in/product/10m-gt2-width-6mm-white-open-timing-belt-for-3d-printer/
+GT2 Timing Idler Pulleys,4,130.00,520.00,$5.42,https://robu.in/product/aluminum-gt2-timing-pulley-6mm-belt-16-tooth-5mm-bore-2pcs/
+NEMA 17 Stepper Motors (D-Type Shaft),4,"1,329.00","5,316.00",$55.43,https://robu.in/product/stepperonline-nema-17-bipolar-stepper-motor-26ncm/
+2020 V-Slot Aluminum Extrusion Profiles (1M lengths),4,460.00,"1,840.00",$19.19,https://robu.in/product/easymech-20x20-t-slot-aluminium-extrusion-profile-1000-mm/
+T-Shape Corner Bracket Plates for 2020,4,525.00,"2,100.00",$21.90,Local
+Ball Screw End Support Bearings (BK/BF12),2,630.00,"1,260.00",$13.14,Local
+NEMA 17 Stepper Motor Mounting Brackets,2,422.00,844.00,$8.80,Local
+2020 Cast Corner Brackets,24,62.75,"1,506.00",$15.70,Local
+M5 Hammer / Sliding Nuts,100,9.00,900.00,$9.38,https://onlyscrews.in/products/m4-profile-nuts-mild-steel-with-nickel-plating-for-3030-series-t-nut-hammer-nut-1?variant=50662617383225
+M3 Hammer / Sliding Nuts,15,8.50,132.50,$1.38,https://onlyscrews.in/products/m3-profile-nuts-mild-steel-with-nickel-plating-for-2020-series-t-nut-hammer-nut
+"M5 Button Head Screws (8mm, 13mm, 16mm, 20mm mix)",80,3.29,263.00,$2.74,Local
+M5 T-Nuts,20,28.90,578.00,$6.03,https://robu.in/product/easymech-sliding-m5-t-nut-for-20x20-aluminium-profile-10-pcs/
+M3 Screws (12mm),16,3.31,53.00,$0.55,Local
+3D Printed Custom Parts,1,"1,050.00","1,050.00",$10.95,Local
+100nf Capacitor (C_0805),1,5.25,5.25,$0.05,Local
+"10uf Capacitor (C_0805) [C1, C2]",2,5.25,10.50,$0.11,Local
+"100uf Capacitor (C_0805) [C3, C4, C5]",3,7.35,22.05,$0.23,Local
+"1N4007 Diode [D1, D2, D3]",3,21.30,63.90,$0.67,https://www.digikey.in/en/products/detail/onsemi/1N4007RLG/918021
+"SK6805 LED [D4, D5, D6]",3,14.70,44.10,$0.46,Local
+TMC2208/2209 Stepper Driver (Driver1),1,512.00,512.00,$5.34,https://robu.in/product/tmc2209-stepper-motor-driver/
+"TMC2208/2209 Stepper Driver (Driver2, UDriver1)",2,512.00,"1,024.00",$10.68,https://robu.in/product/tmc2209-stepper-motor-driver/
+JST 3-Pin Socket Connector [Endstops],3,10.50,31.50,$0.33,Local
+JST 2-Pin Pin Connector [Fans 1-3],3,10.50,31.50,$0.33,Local
+Pin Header 1x01 Socket [J1],1,10.50,10.50,$0.11,Local
+Pin Socket 1x02 [J2],1,10.50,10.50,$0.11,Local
+"IRLZ44N MOSFET [Q1, Q2, Q3]",3,42.00,126.00,$1.31,https://robu.in/product/irlz44n/
+4.7k ohm Resistor (R1),1,5.25,5.25,$0.05,Local
+220 ohm Resistor (R2),1,5.25,5.25,$0.05,Local
+"220 ohm Resistor [R3, R4]",2,5.25,10.50,$0.11,Local
+"10k Resistor [R5, R6, R7]",3,5.25,15.75,$0.16,Local
+JST 2-Pin Connector [Temp Sensor],1,10.50,10.50,$0.11,Local
+AMS1117-3.3 Voltage Regulator [U1],1,11.55,11.55,$0.12,Local
+ESP32-S3-DevKitC [U2],1,882.00,"1,839.00",$19.18,https://robu.in/product/esp32-wroom-e-esp32-devkitc-core-board-for-arduino/
+MPU6050 Accelerometer [U3],1,157.50,157.50,$1.64,https://robu.in/product/mpu-6050-gyro-sensor-2-accelerometer/
+extruder,1,"1,170.00","1,170.00",$12.20,https://www.amazon.in/dp/B07TVP1Q33
+Heat Bed,1,"2,915.00","2,915.00",$30.40,https://www.amazon.in/dp/B0HH76B4YJ
+Hot End,1,849.00,849.00,$8.85,https://www.amazon.in/dp/B07L8ZGYVF
+Springs,2,219.00,438.00,$4.57,https://www.amazon.in/dp/B07SQCC24P
+SMPS,1,"1,399.00","1,399.00",$14.59,https://www.amazon.in/dp/B07LCVY4Q3
+PCB,1,800.00,800.00,$8.34,https://robu.in
+Step Down Converter [XL103],1,84.00,84.00,$0.88,Local
+,,Total price,"42,923.60",$447.59,
