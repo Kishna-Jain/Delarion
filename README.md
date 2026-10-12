@@ -21,17 +21,14 @@ This is the first PCB i made so yeah not beautiful, not well laid out, but yeah 
 3d model Demo link::
 https://cad.onshape.com/documents/ddc5642abc531e1225c0dc8b/w/1fb68ecf66842d529f7141f3/e/0a949859a3af9baaf41af0a4
 
-CREDITS:
-@hacktheclub honetly this project was only possible cause of them, they helped me connect find the right people and finally pushed me to make my dream.
+Credits
 
-@Stardance as per this commit i am submitting it for funding, fingers crossed that i get funded to make it actual project kudos
+This project wouldn't exist without a lot of people:
 
-@RaygunRupe at first i just started to make it blindly, buy stuff build it and figure on the fly, the only reason i am actually stuck in this deep at designing, to polish the looks is cause of this mf, otherwise i would had already made a mess by skipping all the design aan CAD stuff
-
-@Mistsu Makes(youtube) I waatched his toutorial to understand how to do this project, how the motion system works how the bedslinging mechanism should, if it werent for him, it would had been quite more difficult. And yeah it was this dude only whoose video after watching i decided that yeah lets fing do it, he was my starting point kinda that yeah i can too make this.
-
-@ 3ddistributed.com This gottna be the best website to understand coreXY working, i watched countless toutorials but in the end got how to do this vis this website's infographics only
-
+Hack Club: honestly this project was only possible because of them. They helped me find the right people and finally pushed me to go build my dream.
+Stardance: I'm submitting this for funding as per this commit, fingers crossed!
+@RaygunRupe: at first I was just going to build it blindly, buy stuff and figure it out on the fly. The only reason I'm this deep into designing and polishing the looks is because of this guy. Otherwise I'd have skipped all the design and CAD work and made a mess.
+Mistsu Makes (YouTube): I watched his tutorials to understand how the motion system works and how the bed slinging mechanism should work. It would have been way harder without him, and his video is what made me decide "yeah, let's do it, I can make this too."
+3ddistributed.com: probably the best website for understanding how CoreXY works. I watched countless tutorials, but it was this site's infographics that finally made it click.
+The Slack hardware community: they helped me a lot, from figuring out how all of this works to connecting me with people who helped me make it.
 @Slack hardware community, thoose guys also helped me a lot from figring out how this shit works to networking with people that helped me make this
-
-
