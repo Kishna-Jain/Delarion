@@ -1,39 +1,171 @@
 # Delarion
-A custom core XY 3d printer
 
-Delarion is a project aimed to make a decent bang for your buck core xy 3d printer. The frame is made out of 2020 aluminum extrusions giving it a sturdy rigid frame with ball screws,linear rails to provide that buttery smooth movement.
+### A custom CoreXY 3D printer: the best bang for your buck
 
-<img width="1767" height="1048" alt="Screenshot 2026-09-06 150802" src="https://github.com/user-attachments/assets/610b3218-75e4-4d01-9691-6848fe283e0e" />
+![Delarion render](https://github.com/user-attachments/assets/610b3218-75e4-4d01-9691-6848fe283e0e)
 
+Delarion is a CoreXY 3D printer designed to deliver near-premium performance without a premium price. It is built on a rigid **2020 aluminum extrusion** frame, with **ball screws** and **linear rails** for smooth, accurate motion, and runs **Klipper** on a custom **ESP32-S3** control board.
 
-How it began? basically every geek has an urge to keep building random nerd stuff via youtube tutorial, i went via it through but gotta admit the work-around required to make something without a 3d printer that uses is quite messy with the final thing not having that finesse instead a messy encasement made out of scraps, i guess we all been there. When i went out to buy a cheap 3d printer the results werent that good. Yes 3d printers are nowadays quite cheap starting from a 100 bucks usd but honestly thoose are mostly crap and why to even buy an ender 3 nowadays as everything is just better than it. Yes bamboo is an option some budget products are there but still not satisfactory. So a good printer will cost about 500 dollars while cheap ones are just cheap(Atleast over here in my area) So the quest beagn to create a 3d printer and voila that how this project began.
+> **Status:** Design / pre-build. Submitted to Hack Club Stardance for funding.
 
-**Key takaways**:
-Delarion utilizes Klipper firmware with tmc2208 drivers,nema17 stepper motors. The main MCU is an esp32 s3, which does provide endless possibilities for trying out diff stuff. The mian idea for klipper rather than some other mcu based firmware is that 1) it utilizes microprocessor so yeah huge speed advantage, 2) everyone has an old laptop or a raspberry pi laying round, 3) Documentaion
+---
 
-**PCB**:
-its a really basic custom pcb, which includes an MPU6050, tmc2208 drivers, Note that you will need to provide the appropriate 24volts clean supply to the board, 5v supply is cleanly regulated by an ams117. And yeah IRLZ44N needs to be attached at the bottom of the board not the top.
+## Table of Contents
 
-<img width="1724" height="1020" alt="Klipper_mcu" src="https://github.com/user-attachments/assets/056f84d5-a3d5-4a0c-85c6-29b3c66b95aa" />
-This is the first PCB i made so yeah not beautiful, not well laid out, but yeah it works 100% or thats what i atleast hope for
+1. [Why Delarion?](#why-delarion)
+2. [Highlights](#highlights)
+3. [Specifications](#specifications)
+4. [Motion System](#motion-system)
+5. [Electronics and Firmware](#electronics-and-firmware)
+6. [Custom PCB](#custom-pcb)
+7. [3D Model](#3d-model)
+8. [Bill of Materials](#bill-of-materials)
+9. [Build Notes](#build-notes)
+10. [Roadmap](#roadmap)
+11. [Credits](#credits)
 
+---
 
-3d model Demo link::
-https://cad.onshape.com/documents/ddc5642abc531e1225c0dc8b/w/1fb68ecf66842d529f7141f3/e/0a949859a3af9baaf41af0a4
+## Why Delarion?
 
-Credits
+Every maker eventually gets the urge to build random nerdy things from YouTube tutorials. I went down that road too, but without a 3D printer the workarounds get messy, and the final result lacks finesse: a pile of scraps in a makeshift enclosure. We've all been there.
+
+So I went shopping for a cheap printer, and the results weren't great. Printers now start around $100 USD, but most of those are disappointing, and there is little reason to buy an Ender 3 today when almost everything is better. Bambu Lab is an option, and some budget machines exist, but still nothing fully satisfying. In my area, a *good* printer costs about **$500**, while the cheap ones are just cheap.
+
+So the quest began: **build my own.** Delarion is the result.
+
+## Highlights
+
+- **CoreXY kinematics** for fast, light-toolhead motion
+- **2020 aluminum extrusion frame**, sturdy, rigid and easy to source
+- **Ball screws and linear rails** for smooth, precise, quiet movement
+- **Klipper firmware** running on a host computer for high speed and advanced features
+- **ESP32-S3 main MCU**, with Wi-Fi/BLE and plenty of room for experiments
+- **TMC2208 stepper drivers** for quiet operation
+- **MPU6050 accelerometer on the board** for input shaping / resonance tuning
+- **Fully custom PCB**, designed from scratch
+
+## Specifications
+
+| Item | Detail |
+|---|---|
+| Kinematics | CoreXY |
+| Frame | 2020 aluminum extrusion |
+| Linear motion | Linear rails |
+| Z motion | Ball screws |
+| Motors | NEMA 17 steppers |
+| Stepper drivers | TMC2208 |
+| Main MCU | ESP32-S3 |
+| Firmware | Klipper |
+| Host | Raspberry Pi or any spare laptop/PC |
+| Input power | 24 V clean DC supply |
+| Logic power | 5 V regulated on-board |
+| Input shaping sensor | MPU6050 |
+| Build volume | _TBD_ |
+| Max speed / acceleration | _TBD_ |
+| Hotend / extruder | _TBD_ |
+
+<!-- TODO: fill in the TBD rows as the design is finalised -->
+
+## Motion System
+
+CoreXY moves the toolhead in X and Y using two fixed motors and a crossed belt path. Because the motors are stationary, the moving mass is small, which allows higher accelerations and cleaner prints than a traditional bed slinger.
+
+- **X/Y:** two NEMA 17 motors driving a CoreXY belt layout on linear rails
+- **Z:** ball screws for precise, repeatable vertical motion
+- **Bed motion:** designed around the mechanism explained in MistsuMakes' tutorials (see [Credits](#credits))
+
+New to CoreXY? [3ddistributed.com](https://3ddistributed.com) has the best infographics for understanding how the belt path works.
+
+## Electronics and Firmware
+
+### Why Klipper?
+
+1. **Speed:** Klipper offloads heavy computation to a host microprocessor, giving a huge speed advantage over firmware that runs everything on the MCU.
+2. **Accessibility:** Everyone has an old laptop or a Raspberry Pi lying around, so no expensive controller is needed.
+3. **Documentation:** Klipper's docs are excellent and thorough.
+
+### Why ESP32-S3?
+
+It is cheap, powerful, and has built-in wireless, which opens up endless possibilities for experimenting with new features.
+
+### Software stack
+
+- Klipper (firmware on MCU, host software on Pi/PC)
+- Moonraker (API) and a web UI such as Mainsail or Fluidd _(recommended)_
+
+<!-- TODO: add printer.cfg and Klipper MCU build/flash instructions -->
+
+## Custom PCB
+
+A deliberately simple custom board built around the ESP32-S3.
+
+![Delarion Klipper MCU PCB](https://github.com/user-attachments/assets/056f84d5-a3d5-4a0c-85c6-29b3c66b95aa)
+
+**On board:**
+
+- ESP32-S3 MCU
+- TMC2208 stepper drivers
+- MPU6050 accelerometer
+- 5 V regulation
+- IRLZ44N MOSFET(s) for heater/fan switching
+
+> **Key notes**
+>
+> - **Power:** the board needs a **clean 24 V supply**. Poor-quality power will cause problems.
+> - **5 V rail:** regulated on-board by an AMS1117.
+> - **IRLZ44N placement:** mount the IRLZ44N on the **bottom** of the board, **not the top**.
+> - **Honest disclaimer:** this is my first PCB. It isn't beautiful or well laid out, but it works, or at least that's what I'm hoping for. Revisions are expected.
+
+<!-- TODO: add schematic PDF, Gerbers, and pinout table -->
+
+## 3D Model
+
+Explore the full CAD model on Onshape:
+
+**[Open in Onshape](https://cad.onshape.com/documents/ddc5642abc531e1225c0dc8b/w/1fb68ecf66842d529f7141f3/e/0a949859a3af9baaf41af0a4)**
+
+## Bill of Materials
+
+<!-- TODO: replace with the real BOM -->
+
+| Part | Qty | Notes |
+|---|---|---|
+| 2020 aluminum extrusion | _TBD_ | Frame |
+| Linear rails | _TBD_ | X/Y |
+| Ball screws | _TBD_ | Z axis |
+| NEMA 17 steppers | _TBD_ | |
+| Custom PCB | 1 | See PCB section |
+| 24 V power supply | 1 | Clean output |
+| Host (Raspberry Pi / old laptop) | 1 | Runs Klipper host |
+
+## Build Notes
+
+- Square the frame carefully; a rigid, square frame matters more than anything else for print quality.
+- Keep belt tension equal on both CoreXY belts.
+- Double-check PCB orientation of polarised parts and the IRLZ44N mounting side before powering on.
+- Test the board with motors disconnected first, then add components one at a time.
+- Run input shaping calibration using the on-board MPU6050 once the machine is assembled.
+
+## Roadmap
+
+- [x] CAD design
+- [x] First PCB design
+- [ ] Order parts (pending Stardance funding)
+- [ ] Frame and motion assembly
+- [ ] PCB bring-up and Klipper configuration
+- [ ] First print
+- [ ] Input shaping and tuning
+- [ ] PCB revision 2
+- [ ] Full documentation and BOM
+
+## Credits
 
 This project wouldn't exist without a lot of people:
 
-**Hack Club**: honestly this project was only possible because of them. They helped me find the right people and finally pushed me to go build my dream.
-
-**Stardance**: I'm submitting this for funding as per this commit, fingers crossed!
-
-**@RaygunRupe**: at first I was just going to build it blindly, buy stuff and figure it out on the fly. The only reason I'm this deep into designing and polishing the looks is because of this guy. Otherwise I'd have skipped all the design and CAD work and made a mess.
-
-**MistsuMakes** (YouTube): I watched his tutorials to understand how the motion system works and how the bed slinging mechanism should work. It would have been way harder without him, and his video is what made me decide "yeah, let's do it, I can make this too."
-
-3ddistributed.com: probably the best website for understanding how CoreXY works. I watched countless tutorials, but it was this site's infographics that finally made it click.
-
-The Slack hardware community: they helped me a lot, from figuring out how all of this works to connecting me with people who helped me make it.
-@Slack hardware community, thoose guys also helped me a lot from figring out how this shit works to networking with people that helped me make this
+- **[Hack Club](https://hackclub.com):** this project was only possible because of them. They helped me find the right people and pushed me to go build my dream.
+- **Stardance:** I'm submitting this project for funding, fingers crossed!
+- **@RaygunRupe:** I was going to buy parts and figure it out on the fly. The only reason I went this deep into design and polish is because of this guy. Otherwise I'd have skipped the CAD work and made a mess.
+- **MistsuMakes (YouTube):** his tutorials taught me how the motion system and the bed mechanism work. His video is what made me decide, "yeah, let's do it, I can make this too."
+- **[3ddistributed.com](https://3ddistributed.com):** probably the best site for understanding how CoreXY works. After countless tutorials, its infographics finally made it click.
+- **The Slack hardware community:** they helped me figure out how all of this works and connected me with people who helped me build it.
