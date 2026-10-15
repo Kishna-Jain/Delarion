@@ -28,8 +28,12 @@ This project wouldn't exist without a lot of people:
 **Hack Club**: honestly this project was only possible because of them. They helped me find the right people and finally pushed me to go build my dream.
 
 **Stardance**: I'm submitting this for funding as per this commit, fingers crossed!
+
 **@RaygunRupe**: at first I was just going to build it blindly, buy stuff and figure it out on the fly. The only reason I'm this deep into designing and polishing the looks is because of this guy. Otherwise I'd have skipped all the design and CAD work and made a mess.
+
 **MistsuMakes** (YouTube): I watched his tutorials to understand how the motion system works and how the bed slinging mechanism should work. It would have been way harder without him, and his video is what made me decide "yeah, let's do it, I can make this too."
+
 3ddistributed.com: probably the best website for understanding how CoreXY works. I watched countless tutorials, but it was this site's infographics that finally made it click.
+
 The Slack hardware community: they helped me a lot, from figuring out how all of this works to connecting me with people who helped me make it.
 @Slack hardware community, thoose guys also helped me a lot from figring out how this shit works to networking with people that helped me make this
