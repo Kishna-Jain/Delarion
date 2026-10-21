@@ -1,5 +1,20 @@
 #This file has not been tested, its still work in progress!
 
+
+
+
+# PIN MAP (from PCB nets)
+#   Driver1  STEP GPIO1   DIR GPIO2     -> stepper_x
+#   Driver2  STEP GPIO4   DIR GPIO3     -> stepper_y
+#   UDriver1 STEP GPIO6   DIR GPIO5     -> stepper_z
+#   Endstops X GPIO35 | Y GPIO36 | Z GPIO37   (3-pin: 5V / signal / GND)
+#   Q1 gate  GPIO7  -> Fan1 (24V, switched)
+#   Q2 gate  GPIO8, Q3 gate GPIO9       (drains not connected to an output)
+#   RGB LEDs (SK6805) GPIO11 / GPIO12 / GPIO13
+#   Accelerometer footprint: SDA GPIO14, SCL GPIO15 (I2C)
+
+
+
 [stepper_x]
 step_pin: PF0
 dir_pin: PF1
