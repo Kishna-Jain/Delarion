@@ -133,15 +133,6 @@ Explore the full CAD model on Onshape:
 
 **[Open in Onshape](https://cad.onshape.com/documents/ddc5642abc531e1225c0dc8b/w/1fb68ecf66842d529f7141f3/e/0a949859a3af9baaf41af0a4)**
 
-## Bill of Materials
-
-The full BOM with supplier links is in [`BOM.csv`](BOM.csv). Estimated total: **~₹37,500 (~$390 USD)**, which keeps Delarion well under the ~$500 price of a comparable ready-made printer.
-
-> Prices are approximate and use an assumed rate of 1 USD ≈ 95.9 INR (mid-September 2026). Suppliers are mostly Indian: Robu, Robokits, OnlyScrews, Amazon.in and local shops.
-
-Main parts: 2020 aluminum extrusion frame, MGN12H linear rails, ball screws for Z, 4× NEMA 17 steppers, GT2 belts and pulleys, the custom ESP32-S3 PCB with TMC2208/2209 drivers, 24 V SMPS, heated bed, hotend and extruder.
-
-
 ## Roadmap
 
 - [x] CAD design
