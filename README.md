@@ -142,25 +142,6 @@ The full BOM with supplier links is in [`BOM.csv`](BOM.csv). Estimated total: **
 
 Main parts: 2020 aluminum extrusion frame, MGN12H linear rails, ball screws for Z, 4× NEMA 17 steppers, GT2 belts and pulleys, the custom ESP32-S3 PCB with TMC2208/2209 drivers, 24 V SMPS, heated bed, hotend and extruder.
 
-## Repository Structure
-
-```
-Delarion/
-├── README.md
-├── BOM.csv
-├── assets/        # images used in this README
-├── CAD/           # full assembly (.step) and printable parts
-├── PCB/           # KiCad project files
-└── firmware/      # Klipper printer.cfg and flashing notes
-```
-
-## Build Notes
-
-- Square the frame carefully; a rigid, square frame matters more than anything else for print quality.
-- Keep belt tension equal on both CoreXY belts.
-- Double-check PCB orientation of polarised parts and the IRLZ44N mounting side before powering on.
-- Test the board with motors disconnected first, then add components one at a time.
-- Run input shaping calibration using the on-board MPU6050 once the machine is assembled.
 
 ## Roadmap
 
