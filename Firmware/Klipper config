@@ -5,8 +5,6 @@
 # DO NOT COPY THIS FILE WITHOUT CAREFULLY READING AND UPDATING IT
 # FIRST. Incorrectly configured parameters may cause damage.
 
-# See docs/Config_Reference.md for a description of parameters.
-
 [stepper_x]
 step_pin: PF0
 dir_pin: PF1
@@ -17,6 +15,10 @@ endstop_pin: ^PE5
 position_endstop: 0
 position_max: 200
 homing_speed: 50
+ax_velocity: 100
+max_accel: 1000
+max_z_velocity: 8
+max_z_accel: 50
 
 [stepper_y]
 step_pin: PF6
