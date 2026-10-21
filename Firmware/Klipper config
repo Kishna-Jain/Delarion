@@ -1,9 +1,4 @@
-# This file is an example config file for corexy (and also h-bot)
-# style printers. One may copy and edit this file to configure a new
-# corexy printer.
-
-# DO NOT COPY THIS FILE WITHOUT CAREFULLY READING AND UPDATING IT
-# FIRST. Incorrectly configured parameters may cause damage.
+#This file has not been tested, its still work in progress!
 
 [stepper_x]
 step_pin: PF0
@@ -80,18 +75,19 @@ max_accel: 3000
 max_z_velocity: 25
 max_z_accel: 30
 
-#[neopixel led1]
-#pin: gpio11
-#chain_count: 1
-#color_order: GRB
-#
-#[neopixel led2]
-#pin: gpio12
-#chain_count: 1
-#color_order: GRB
-#
-#[neopixel led3]
-#pin: gpio13
-#chain_count: 1
-#color_order: GRB
+[neopixel led1]
+pin: gpio11
+chain_count: 1
+color_order: GRB
+
+[neopixel led2]
+in: gpio12
+chain_count: 1
+color_order: GRB
+
+[neopixel led3]
+pin: gpio13
+chain_count: 1
+color_order: GRB
+
 
