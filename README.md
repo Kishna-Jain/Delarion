@@ -8,6 +8,8 @@ Delarion is a CoreXY 3D printer designed to deliver near-premium performance wit
 
 > **Status:** Design / pre-build. Submitted to Hack Club Stardance for funding.
 
+[![View PCB on KiCanvas](https://hack.club/pcb-badge)](https://kicanvas.org/?repo=https://github.com/Kishna-Jain/Delarion/tree/main/PCB) [![View BOM](https://img.shields.io/badge/View-BOM-green)](BOM.csv) [![3D Model](https://img.shields.io/badge/CAD-Onshape-orange)](https://cad.onshape.com/documents/ddc5642abc531e1225c0dc8b/w/1fb68ecf66842d529f7141f3/e/0a949859a3af9baaf41af0a4)
+
 ---
 
 ## Table of Contents
@@ -20,9 +22,10 @@ Delarion is a CoreXY 3D printer designed to deliver near-premium performance wit
 6. [Custom PCB](#custom-pcb)
 7. [3D Model](#3d-model)
 8. [Bill of Materials](#bill-of-materials)
-9. [Build Notes](#build-notes)
-10. [Roadmap](#roadmap)
-11. [Credits](#credits)
+9. [Repository Structure](#repository-structure)
+10. [Build Notes](#build-notes)
+11. [Roadmap](#roadmap)
+12. [Credits](#credits)
 
 ---
 
@@ -59,11 +62,12 @@ So the quest began: **build my own.** Delarion is the result.
 | Firmware | Klipper |
 | Host | Raspberry Pi or any spare laptop/PC |
 | Input power | 24 V clean DC supply |
-| Logic power | 5 V regulated on-board |
+| Logic power | 5 V external, 3.3 V regulated on-board (AMS1117-3.3) |
 | Input shaping sensor | MPU6050 |
 | Build volume | _TBD_ |
 | Max speed / acceleration | _TBD_ |
-| Hotend / extruder | _TBD_ |
+| Hotend / extruder | Standard hotend and extruder (see `BOM.csv`) |
+| Estimated cost | ~₹37,500 (~$390), see `BOM.csv` |
 
 <!-- TODO: fill in the TBD rows as the design is finalised -->
 
@@ -107,15 +111,20 @@ A deliberately simple custom board built around the ESP32-S3.
 - ESP32-S3 MCU
 - TMC2208 stepper drivers
 - MPU6050 accelerometer
-- 5 V regulation
+- AMS1117-3.3 regulator for the 3.3 V logic rail
 - IRLZ44N MOSFET(s) for heater/fan switching
 
 > **Key notes**
 >
 > - **Power:** the board needs a **clean 24 V supply**. Poor-quality power will cause problems.
-> - **5 V rail:** regulated on-board by an AMS1117.
+> - **External 24 V and 5 V:** the XL103 step-down converter is **not mounted on the PCB** because it produces too much heat. Provide clean 24 V and 5 V from an external converter to the designated pins, with **active cooling** on the converter.
+> - **3.3 V rail:** regulated on-board by an AMS1117-3.3.
+> - **Driver cooling:** fit heatsinks and active cooling to the TMC2208/2209 drivers, otherwise the risk of damage is high.
+> - **Designed in KiCad 10.**
 > - **IRLZ44N placement:** mount the IRLZ44N on the **bottom** of the board, **not the top**.
 > - **Honest disclaimer:** this is my first PCB. It isn't beautiful or well laid out, but it works, or at least that's what I'm hoping for. Revisions are expected.
+
+[![View PCB on KiCanvas](https://hack.club/pcb-badge)](https://kicanvas.org/?repo=https://github.com/Kishna-Jain/Delarion/tree/main/PCB)
 
 <!-- TODO: add schematic PDF, Gerbers, and pinout table -->
 
@@ -127,17 +136,23 @@ Explore the full CAD model on Onshape:
 
 ## Bill of Materials
 
-<!-- TODO: replace with the real BOM -->
+The full BOM with supplier links is in [`BOM.csv`](BOM.csv). Estimated total: **~₹37,500 (~$390 USD)**, which keeps Delarion well under the ~$500 price of a comparable ready-made printer.
 
-| Part | Qty | Notes |
-|---|---|---|
-| 2020 aluminum extrusion | _TBD_ | Frame |
-| Linear rails | _TBD_ | X/Y |
-| Ball screws | _TBD_ | Z axis |
-| NEMA 17 steppers | _TBD_ | |
-| Custom PCB | 1 | See PCB section |
-| 24 V power supply | 1 | Clean output |
-| Host (Raspberry Pi / old laptop) | 1 | Runs Klipper host |
+> Prices are approximate and use an assumed rate of 1 USD ≈ 95.9 INR (mid-September 2026). Suppliers are mostly Indian: Robu, Robokits, OnlyScrews, Amazon.in and local shops.
+
+Main parts: 2020 aluminum extrusion frame, MGN12H linear rails, ball screws for Z, 4× NEMA 17 steppers, GT2 belts and pulleys, the custom ESP32-S3 PCB with TMC2208/2209 drivers, 24 V SMPS, heated bed, hotend and extruder.
+
+## Repository Structure
+
+```
+Delarion/
+├── README.md
+├── BOM.csv
+├── assets/        # images used in this README
+├── CAD/           # full assembly (.step) and printable parts
+├── PCB/           # KiCad project files
+└── firmware/      # Klipper printer.cfg and flashing notes
+```
 
 ## Build Notes
 
@@ -151,6 +166,7 @@ Explore the full CAD model on Onshape:
 
 - [x] CAD design
 - [x] First PCB design
+- [ ] Full CAD assembly STEP, Klipper config and firmware notes added to repo
 - [ ] Order parts (pending Stardance funding)
 - [ ] Frame and motion assembly
 - [ ] PCB bring-up and Klipper configuration
