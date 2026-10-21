@@ -67,7 +67,6 @@ So the quest began: **build my own.** Delarion is the result.
 | Build volume | _TBD_ |
 | Max speed / acceleration | _TBD_ |
 | Hotend / extruder | Standard hotend and extruder (see `BOM.csv`) |
-| Estimated cost | ~₹37,500 (~$390), see `BOM.csv` |
 
 <!-- TODO: fill in the TBD rows as the design is finalised -->
 
