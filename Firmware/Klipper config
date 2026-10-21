@@ -79,3 +79,19 @@ max_velocity: 300
 max_accel: 3000
 max_z_velocity: 25
 max_z_accel: 30
+
+#[neopixel led1]
+#pin: gpio11
+#chain_count: 1
+#color_order: GRB
+#
+#[neopixel led2]
+#pin: gpio12
+#chain_count: 1
+#color_order: GRB
+#
+#[neopixel led3]
+#pin: gpio13
+#chain_count: 1
+#color_order: GRB
+
