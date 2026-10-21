@@ -21,11 +21,8 @@ Delarion is a CoreXY 3D printer designed to deliver near-premium performance wit
 5. [Electronics and Firmware](#electronics-and-firmware)
 6. [Custom PCB](#custom-pcb)
 7. [3D Model](#3d-model)
-8. [Bill of Materials](#bill-of-materials)
-9. [Repository Structure](#repository-structure)
-10. [Build Notes](#build-notes)
-11. [Roadmap](#roadmap)
-12. [Credits](#credits)
+8. [Roadmap](#roadmap)
+9. [Credits](#credits)
 
 ---
 
